@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2 read or try </title>
+	<style>
+		#main_box{
+			width:1000px;
+			height:400px;
+			border-bottom: 2px solid black;
+		}
+		.main_box1{
+			width:1000px;
+			height:400px;
+			border-bottom: 2px solid black;
+			animation-name: slideMainDiv;
+			transform: rotate(-17deg);
+			transition-duration: 4s;
+			timing-function:ease-out ;
+		}
+		.box{
+			width:160px;
+			height:160px;
+			position:relative;
+			top: 250px;
+			left:850px;
+		}
+		
+		.box1{
+			width:160px;
+			height:160px;
+			position:relative;
+			top: 250px;
+			left:850px;
+			
+			-webkit-animation-name: weelDown;
+			-webkit-animation-duration: 6s;
+			-webkit-animation-delay : 3.5s;
+			-webkit-animation-timing-function:linear;
+			-webkit-animation-fill-mode:backwards;
+		}
+
+		@keyframes weelDown{
+			from{ left: 850px;}
+			to { left:0px;}
+		}
+
+		@-webkit-keyframes weelDown{
+			from{ left: 850px;}
+			to { left:0px;}
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<input type="button" value="Roll Weel Down" onclick="weelDown()">
+	<div id="main_box">
+		<div class="box" id="inner_div">
+			<img src="wheel.png" style="width:150px; height:150px; position:absolute">
+		</div>
+	</div>
+<script>
+	function weelDown(){
+		document.getElementById("inner_div").className = 'box1' ;
+		document.getElementById("main_box").className = "main_box1";
+	}
+</script>
+</body>
+</html>
